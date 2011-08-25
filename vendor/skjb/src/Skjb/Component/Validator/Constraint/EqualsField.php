@@ -9,15 +9,20 @@ use Symfony\Component\Validator\Constraint;
 */
 class EqualsField extends Constraint
 {
-    public $message = 'This value does not equal the other field';
-    
+    public $message = 'This value does not equal the {{ field }} field';
     public $field;
     
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultOption()
     {
         return 'field';
     }
     
+    /**
+     * {@inheritDoc}
+     */
     public function getRequiredOptions()
     {
         return array('field');
