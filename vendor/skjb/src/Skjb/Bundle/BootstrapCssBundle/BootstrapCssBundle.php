@@ -1,10 +1,10 @@
 <?php
 
-namespace Boku\Bundle\BootstrapBundle;
+namespace Skjb\Bundle\BootstrapCssBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class BootstrapBundle extends Bundle
+class BootstrapCssBundle extends Bundle
 {
     
 }
