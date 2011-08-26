@@ -18,7 +18,6 @@ class EqualsFieldValidator extends ConstraintValidator
     public function isValid($value, Constraint $constraint)
     {
         if ($value !== $this->context->getRoot()->get($constraint->field)->getData()) {
-            
             $this->setMessage($constraint->message, array(
                 '{{ field }}' => $constraint->field,
             ));
