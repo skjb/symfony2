@@ -7,3 +7,28 @@
 {% block field_row %}
     {% include 'BootstrapCssBundle:Form:field_row.html.twig' %}
 {% endblock field_row %}
+
+{% block choice_widget %}
+    {% if expanded %}
+        <ul class="inputs-list">
+            {% for child in form %}
+                <li>
+                    <label>
+                        {{ form_widget(child) }}
+                        {{ form_label(child) }}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock choice_widget %}
+
+{% block checkbox_label %}
+    <span>{{ label }}</span>
+{% endblock checkbox_label %}
+
+{% block radio_label %}
+    <span>{{ label }}</span>
+{% endblock radio_label %}
